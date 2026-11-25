@@ -1,0 +1,9 @@
+[
+  {"nome": "Agência Brasil", "url": "https://agenciabrasil.ebc.com.br/rss/economia/feed.xml", "oficial": true},
+  {"nome": "G1 Economia", "url": "https://g1.globo.com/rss/g1/economia/", "oficial": false},
+  {"nome": "InfoMoney", "url": "https://www.infomoney.com.br/feed/", "oficial": false},
+  {"nome": "Exame", "url": "https://exame.com/feed/", "oficial": false},
+  {"nome": "CNN Brasil Economia", "url": "https://www.cnnbrasil.com.br/economia/feed/", "oficial": false},
+  {"nome": "Money Times", "url": "https://www.moneytimes.com.br/feed/", "oficial": false},
+  {"nome": "Poder360 Economia", "url": "https://www.poder360.com.br/economia/feed/", "oficial": false}
+]

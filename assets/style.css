@@ -1,0 +1,57 @@
+:root{--petrol:#0B3C49;--ink:#14202B;--paper:#F5F7F6;--gold:#E8A317;--coral:#D9482B;--line:#D7DEDC;--muted:#58676F;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.65 "Source Serif 4",Georgia,serif}
+h1,h2,h3,.brand,.cats a,.tag,.search button,.offer em,.plat,footer strong,.share{font-family:"Bricolage Grotesque",system-ui,sans-serif}
+a{color:var(--petrol)}img{max-width:100%;height:auto;display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;background:#fff;padding:8px;z-index:9}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.top{background:var(--white);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+.bar{display:flex;align-items:center;gap:16px;padding-top:12px;padding-bottom:12px}
+.brand{display:flex;align-items:center;gap:10px;font-size:1.5rem;font-weight:700;text-decoration:none;color:var(--petrol);letter-spacing:-.02em}
+.brand b{color:var(--gold);font-weight:800}.logo-ring{width:34px;height:34px}
+.search{margin-left:auto;display:flex}.search input{border:1px solid var(--line);border-right:0;padding:9px 12px;border-radius:6px 0 0 6px;font:inherit;font-size:.95rem;min-width:220px}
+.search button{border:0;background:var(--petrol);color:#fff;padding:9px 16px;border-radius:0 6px 6px 0;font-weight:600;cursor:pointer}
+.search.big{margin:0 0 24px}.search.big input{flex:1}
+.burger{display:none;border:1px solid var(--line);background:#fff;padding:8px 12px;border-radius:6px;font-weight:600}
+.cats{background:var(--petrol)}.cats .wrap{display:flex;gap:4px;overflow-x:auto}
+.cats a{color:#fff;text-decoration:none;padding:11px 14px;white-space:nowrap;font-weight:500;font-size:.95rem}
+.cats a:hover{background:rgba(255,255,255,.12)}.cats a.hot{background:var(--gold);color:var(--ink);font-weight:700;margin-left:auto}
+.hero{display:grid;grid-template-columns:2fr 1fr;gap:32px;padding-top:32px;padding-bottom:12px}
+.card a{display:block;text-decoration:none;color:inherit}.card img{border-radius:6px;margin-bottom:12px;width:100%}
+.card h3{font-size:1.2rem;line-height:1.25;margin:6px 0;letter-spacing:-.01em}.card.big h3{font-size:2.1rem;line-height:1.12}
+.card p{margin:0 0 8px;color:var(--muted);font-size:.98rem}.card time{font-size:.85rem;color:var(--muted)}
+.card a:hover h3{text-decoration:underline;text-decoration-color:var(--gold);text-decoration-thickness:3px}
+.tag{display:inline-block;background:var(--petrol);color:#fff;font-size:.78rem;font-weight:600;padding:2px 9px;border-radius:4px}
+.today{border-left:4px solid var(--gold);padding-left:20px}.today h2{font-size:1.1rem;margin:0 0 8px}
+.today a{display:block;padding:12px 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink);font-weight:600;line-height:1.35}
+.today a span{display:block;font:600 .8rem "Bricolage Grotesque",sans-serif;color:var(--coral)}
+.sec{font-size:1.6rem;margin:40px 0 18px;letter-spacing:-.02em}.ph{font-size:2.4rem;margin:36px 0 6px;letter-spacing:-.02em}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.offers{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.offer{display:flex;flex-direction:column;gap:6px;background:#fff;border:1px solid var(--line);border-left:5px solid var(--gold);padding:16px;text-decoration:none;color:var(--ink);border-radius:6px}
+.offer strong{font-family:"Bricolage Grotesque",sans-serif;font-size:1.05rem}.offer .od{color:var(--muted);font-size:.93rem;line-height:1.4}
+.offer em{font-style:normal;font-weight:700;color:var(--petrol);margin-top:auto}.offer:hover{border-color:var(--petrol)}
+.plat{font-size:.75rem;font-weight:700;color:#fff;padding:2px 8px;border-radius:4px;align-self:flex-start}
+.p-amazon{background:#232F3E}.p-mercadolivre{background:#2D3277}.p-shopee{background:#EE4D2D}
+.chips{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.chips a{background:#fff;border:1px solid var(--line);padding:16px;text-decoration:none;color:var(--ink);border-radius:6px}
+.chips strong{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:1.1rem;color:var(--petrol)}.chips span{font-size:.92rem;color:var(--muted)}
+.art{max-width:780px}.art h1{font-size:2.5rem;line-height:1.1;letter-spacing:-.025em;margin:20px 0 10px}
+.crumb{font-size:.9rem;margin-top:24px;color:var(--muted)}.lead{font-size:1.25rem;color:var(--muted);margin:0 0 8px}.meta{font-size:.9rem;color:var(--muted)}
+.hero-img{border-radius:8px;margin:18px 0 26px;width:100%}
+.prose{max-width:68ch;line-height:1.75}.prose h2{font-size:1.5rem;margin:2rem 0 .5rem;letter-spacing:-.01em}.prose li{margin:.35rem 0}
+.share{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:28px 0;font-size:.9rem}
+.share a{border:1px solid var(--line);background:#fff;padding:6px 12px;border-radius:999px;text-decoration:none;font-weight:600}
+.offers-box{background:#fff;border:1px solid var(--line);padding:20px;border-radius:8px;margin:28px 0}.offers-box h2{margin:0 0 12px;font-size:1.3rem}
+.more{margin-top:40px}.more .grid{grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+.fine{font-size:.82rem;color:var(--muted)}.empty{padding:80px 20px;text-align:center}
+.cform{display:grid;gap:12px;max-width:520px}.cform input,.cform textarea{width:100%;padding:10px;font:inherit;border:1px solid var(--line);border-radius:6px}
+.cform button{background:var(--petrol);color:#fff;border:0;padding:12px;border-radius:6px;font-weight:700;cursor:pointer}
+footer{background:var(--ink);color:#C9D3D6;margin-top:60px;padding:36px 0 16px;font-size:.95rem}
+.fgrid{display:grid;grid-template-columns:1.2fr 1fr 1.4fr;gap:32px}footer a{display:block;color:#fff;margin:6px 0}footer strong{color:var(--gold);display:block;margin-bottom:6px}
+.soc a{display:inline-block;margin-right:12px}.copy{margin-top:24px;border-top:1px solid #2A3A47;padding-top:14px;font-size:.85rem}
+@media(max-width:900px){.hero{grid-template-columns:1fr}.grid,.offers{grid-template-columns:repeat(2,1fr)}.fgrid{grid-template-columns:1fr}.card.big h3{font-size:1.7rem}}
+@media(max-width:620px){.grid,.offers{grid-template-columns:1fr}.bar{flex-wrap:wrap}.search{order:3;width:100%;margin:0}.search input{flex:1;min-width:0}
+.burger{display:block;margin-left:auto}.cats{display:none}.cats.open{display:block}.cats .wrap{flex-direction:column}.cats a.hot{margin:0}.art h1{font-size:1.9rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}

@@ -1,0 +1,21 @@
+{
+  "nome": "Finanças 360",
+  "slogan": "Dinheiro explicado de todos os ângulos",
+  "descricao": "Notícias, guias e educação financeira em português: economia, investimentos, cartões, bancos digitais, fintechs e como economizar.",
+  "base_url": "https://SEU-USUARIO.github.io/financas-360",
+  "email": "contato@exemplo.com",
+  "responsavel": "Equipe Finanças 360",
+  "formspree_id": "",
+  "google_analytics_id": "",
+  "ai_model": "openai/gpt-4o-mini",
+  "redes": {"instagram": "", "x": "", "facebook": "", "youtube": "", "telegram": "", "whatsapp_canal": ""},
+  "categorias": {
+    "economia": {"nome": "Economia", "desc": "Juros, inflação, câmbio e o que move a economia brasileira."},
+    "investimentos": {"nome": "Investimentos", "desc": "Renda fixa, bolsa, fundos e estratégias para o seu patrimônio."},
+    "financas-pessoais": {"nome": "Finanças pessoais", "desc": "Orçamento, dívidas, impostos e direitos do consumidor."},
+    "cartoes-e-bancos": {"nome": "Cartões e bancos", "desc": "Cartões de crédito, bancos digitais, Pix e contas."},
+    "fintechs": {"nome": "Fintechs e tecnologia", "desc": "Open finance, cripto, IA e inovação no dinheiro."},
+    "empreendedorismo": {"nome": "Empreendedorismo", "desc": "MEI, pequenos negócios e gestão financeira da empresa."},
+    "economize": {"nome": "Economize", "desc": "Ofertas, cashback e formas de gastar menos."}
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "_ajuda": "Cole seu link de afiliado no campo 'url' de cada item. Amazon: se preencher 'amazon_tag' (ex.: meusite-20), itens sem 'url' usam busca com a sua tag. Mercado Livre e Shopee: gere o link no painel de afiliados e cole em 'url'. Itens sem link não aparecem no site.",
+  "amazon_tag": "",
+  "itens": [
+    {"plataforma": "amazon", "titulo": "Psicologia Financeira", "desc": "Livro sobre comportamento e hábitos com dinheiro.", "busca": "psicologia financeira morgan housel", "categorias": ["financas-pessoais", "investimentos"], "url": ""},
+    {"plataforma": "amazon", "titulo": "O Investidor Inteligente", "desc": "Clássico de Benjamin Graham sobre investir a longo prazo.", "busca": "o investidor inteligente benjamin graham", "categorias": ["investimentos", "economia"], "url": ""},
+    {"plataforma": "amazon", "titulo": "Pai Rico, Pai Pobre", "desc": "Introdução popular à educação financeira.", "busca": "pai rico pai pobre", "categorias": ["financas-pessoais", "empreendedorismo"], "url": ""},
+    {"plataforma": "amazon", "titulo": "Leitor digital Kindle", "desc": "Leve sua biblioteca de finanças para qualquer lugar.", "busca": "kindle", "categorias": ["economize", "fintechs"], "url": ""},
+    {"plataforma": "amazon", "titulo": "Planner financeiro", "desc": "Organize gastos, metas e contas do mês.", "busca": "planner financeiro", "categorias": ["financas-pessoais", "economize"], "url": ""},
+    {"plataforma": "amazon", "titulo": "Calculadora financeira HP 12C", "desc": "Padrão para cálculos de juros e parcelas.", "busca": "calculadora financeira hp 12c", "categorias": ["investimentos", "empreendedorismo", "economia"], "url": ""},
+    {"plataforma": "mercadolivre", "titulo": "Maquininha de cartão", "desc": "Para quem vende e quer receber por cartão e Pix.", "busca": "", "categorias": ["empreendedorismo", "cartoes-e-bancos"], "url": ""},
+    {"plataforma": "mercadolivre", "titulo": "Organizador de documentos", "desc": "Mantenha contratos, boletos e recibos em ordem.", "busca": "", "categorias": ["financas-pessoais", "economize"], "url": ""},
+    {"plataforma": "mercadolivre", "titulo": "Ofertas do dia", "desc": "Seleção de promoções para economizar nas compras.", "busca": "", "categorias": ["economize", "economia"], "url": ""},
+    {"plataforma": "shopee", "titulo": "Cofrinho para guardar dinheiro", "desc": "Ajuda a criar o hábito de poupar.", "busca": "", "categorias": ["financas-pessoais", "economize"], "url": ""},
+    {"plataforma": "shopee", "titulo": "Carteira com bloqueio RFID", "desc": "Proteção extra para cartões por aproximação.", "busca": "", "categorias": ["cartoes-e-bancos", "fintechs"], "url": ""},
+    {"plataforma": "shopee", "titulo": "Cupons e ofertas da semana", "desc": "Preços baixos em itens do dia a dia.", "busca": "", "categorias": ["economize", "economia", "empreendedorismo"], "url": ""}
+  ]
+}
