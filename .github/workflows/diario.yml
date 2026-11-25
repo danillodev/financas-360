@@ -1,0 +1,77 @@
+name: Publicação diária Finanças 360
+
+on:
+  schedule:
+    - cron: "0 11 * * *"        # 11:00 UTC = 08:00 em Brasília (UTC-3, sem horário de verão)
+  workflow_dispatch:
+    inputs:
+      forcar:
+        description: "Publicar mesmo que já exista post de hoje"
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+    paths-ignore: ["data/**", "logs/**"]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+  models: read
+  issues: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+
+      - name: Gerar post do dia (até 3 tentativas)
+        id: gen
+        if: github.event_name != 'push'
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          AI_API_KEY: ${{ secrets.AI_API_KEY }}
+          AI_ENDPOINT: ${{ vars.AI_ENDPOINT }}
+          AI_MODEL: ${{ vars.AI_MODEL }}
+          FORCE: ${{ inputs.forcar && '1' || '' }}
+        run: |
+          for i in 1 2 3; do
+            python scripts/generate.py post && exit 0
+            echo "Tentativa $i falhou"; [ $i -lt 3 ] && sleep 300
+          done
+          exit 1
+
+      - name: Salvar dados e logs
+        if: always() && github.event_name != 'push'
+        run: |
+          git config user.name "financas360-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add data logs
+          git diff --cached --quiet || (git commit -m "Conteúdo diário $(date -u +%F)" && git pull --rebase -q && git push)
+
+      - name: Avisar falha (abre issue)
+        if: steps.gen.outcome == 'failure'
+        env: { GH_TOKEN: "${{ secrets.GITHUB_TOKEN }}" }
+        run: gh issue create --title "Falha na publicação de $(date -u +%F)" --body "As 3 tentativas falharam. Veja logs/errors.log e rode o workflow manualmente (Actions > Run workflow)."
+
+      - name: Construir site
+        env:
+          BASE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
+        run: python scripts/generate.py build
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: _site }
+      - id: deploy
+        uses: actions/deploy-pages@v4
