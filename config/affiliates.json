@@ -1,6 +1,6 @@
 {
   "_ajuda": "Cole seu link de afiliado no campo 'url' de cada item. Amazon: se preencher 'amazon_tag' (ex.: meusite-20), itens sem 'url' usam busca com a sua tag. Mercado Livre e Shopee: gere o link no painel de afiliados e cole em 'url'. Itens sem link não aparecem no site.",
-  "amazon_tag": "",
+  "amazon_tag": "economia360-20",
   "itens": [
     {"plataforma": "amazon", "titulo": "Psicologia Financeira", "desc": "Livro sobre comportamento e hábitos com dinheiro.", "busca": "psicologia financeira morgan housel", "categorias": ["financas-pessoais", "investimentos"], "url": ""},
     {"plataforma": "amazon", "titulo": "O Investidor Inteligente", "desc": "Clássico de Benjamin Graham sobre investir a longo prazo.", "busca": "o investidor inteligente benjamin graham", "categorias": ["investimentos", "economia"], "url": ""},
